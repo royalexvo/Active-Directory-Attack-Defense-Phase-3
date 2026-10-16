@@ -51,7 +51,7 @@ Verified network connectivity between the Kali Linux attacker VM (192.168.10.30)
 <img src="Step2.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 3 – Review Account Lockout & Password Policies<br/><br/>
-Review the existing Active Directory password and account lockout policies configured during Phase 1. Examine password complexity requirements, minimum password length, account lockout thresholds, and lockout durations to understand how these settings affect password spraying attempts: <br/>
+Reviewed the existing Active Directory password and account lockout policies configured during Phase 1 using PowerShell. Verified the minimum password length of 12 characters, enabled password complexity, password history requirements, and password expiration settings. Confirmed an account lockout threshold of three failed attempts, a six-hour lockout duration, and a 30-minute observation window. Additionally, verified that all six test domain accounts were governed by the Default Domain Policy, establishing the baseline security configuration before the controlled password spraying attack: <br/>
 <img src="Step3.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 4 – Prepare Password Spraying Tools & Test Accounts<br/><br/>

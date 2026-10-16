@@ -47,7 +47,7 @@ Verified the existing Active Directory environment and identified six enabled do
 <img src="Step1.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 2 – Verify Kali Linux Network & Domain Connectivity<br/><br/>
-Verify that the Kali Linux attacker VM can communicate with the Windows Server 2022 domain controller and resolve the Myforest.com domain. Confirm the network configuration and connectivity required for the password spraying simulation: <br/>
+Verified network connectivity between the Kali Linux attacker VM (192.168.10.30), Windows Server 2022 domain controller (192.168.10.10), and Windows 11 workstation (192.168.10.20). Used ICMP ping tests to confirm successful communication with both Windows systems and verified that the Myforest.com domain correctly resolved to the domain controller IP address using DNS queries: <br/>
 <img src="Step2.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 3 – Review Account Lockout & Password Policies<br/><br/>

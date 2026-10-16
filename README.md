@@ -43,7 +43,7 @@ This phase provides hands-on experience with identifying, investigating, and def
 
 <p align="center">
 Step 1 – Prepare the Password Spraying Attack Scenario<br/><br/>
-Review the existing Active Directory environment and prepare the domain user accounts for a controlled password spraying simulation. Identify the test accounts, review their configurations, and establish the initial environment before conducting the attack: <br/>
+Verified the existing Active Directory environment and identified six enabled domain user accounts for the controlled password spraying simulation. Used PowerShell to confirm the Myforest.com domain, domain controller, and account lockout status. All six accounts were enabled and unlocked, establishing the initial environment before conducting the attack: <br/>
 <img src="Step1.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 2 – Verify Kali Linux Network & Domain Connectivity<br/><br/>

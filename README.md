@@ -71,7 +71,7 @@ Investigated the authentication activity generated during the controlled passwor
 <img src="Step7.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 8 – Configure Password Spraying Detection & Monitoring<br/><br/>
-Develop a detection approach using Windows Security event logs to identify patterns associated with password spraying. Examine repeated authentication failures across multiple accounts originating from the same source and document indicators that could help security analysts recognize suspicious authentication activity: <br/>
+Developed and tested a PowerShell-based detection method using Windows Security Event ID 4625 to identify potential password spraying activity. Analyzed failed authentication events within a one-minute window and grouped them by source IP address to identify repeated failures across multiple domain accounts. Successfully detected six failed authentication attempts targeting six unique accounts from the Kali Linux attacker VM (192.168.10.30), demonstrating how authentication logs can be correlated to identify suspicious password spraying patterns: <br/>
 <img src="Step8.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 9 – Implement Password Policy & Account Security Hardening<br/><br/>

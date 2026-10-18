@@ -67,7 +67,7 @@ Analyzed the results of the controlled password spraying attack using PowerShell
 <img src="Step6.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 7 – Investigate Windows Security Events<br/><br/>
-Use Windows Event Viewer on the domain controller to investigate authentication activity associated with the password spraying simulation. Analyze relevant security events, including failed authentication and account lockout events, and correlate account names, timestamps, and source information to identify the attack: <br/>
+Investigated the authentication activity generated during the controlled password spraying attack using Windows Event Viewer on the Windows Server 2022 domain controller. Identified six failed logon events (Event ID 4625) occurring at the same timestamp as the attack. Examined the affected domain account, network logon type, and authentication failure codes to correlate the Windows Security logs with the password spraying simulation: <br/>
 <img src="Step7.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 8 – Configure Password Spraying Detection & Monitoring<br/><br/>

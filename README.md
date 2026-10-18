@@ -59,7 +59,7 @@ Prepared the Kali Linux attacker VM for the controlled password spraying simulat
 <img src="Step4.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 5 – Perform the Controlled Password Spraying Attack<br/><br/>
-Simulate a password spraying attack against multiple test domain accounts using a common password within the isolated Active Directory environment. Observe the authentication responses and record the results to demonstrate how attackers attempt to identify accounts using weak or reused passwords: <br/>
+Performed a controlled password spraying attack against six authorized Active Directory domain accounts using NetExec from the Kali Linux attacker VM. Tested a single common password across all six accounts through SMB authentication against the Windows Server 2022 domain controller. All six authentication attempts returned STATUS_LOGON_FAILURE, demonstrating unsuccessful password spraying attempts against the existing domain accounts: <br/>
 <img src="Step5.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 6 – Analyze Authentication Attempts & Account Lockouts<br/><br/>

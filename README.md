@@ -55,7 +55,7 @@ Reviewed the existing Active Directory password and account lockout policies con
 <img src="Step3.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 4 – Prepare Password Spraying Tools & Test Accounts<br/><br/>
-Prepare the Kali Linux attacker system with the utilities required for the controlled password spraying simulation. Create a list of authorized lab domain accounts and verify that the necessary tools and test credentials are available: <br/>
+Prepared the Kali Linux attacker VM for the controlled password spraying simulation by verifying the installation of NetExec and its SMB authentication module. Created a username list containing six authorized Active Directory test accounts and confirmed the file contents and account count. These preparations established the tools and target accounts required for the upcoming attack simulation: <br/>
 <img src="Step4.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 5 – Perform the Controlled Password Spraying Attack<br/><br/>

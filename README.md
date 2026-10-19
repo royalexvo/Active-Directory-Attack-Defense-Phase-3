@@ -75,7 +75,7 @@ Developed and tested a PowerShell-based detection method using Windows Security 
 <img src="Step8.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 9 – Implement Password Policy & Account Security Hardening<br/><br/>
-Implement defensive measures to reduce the risk of password spraying attacks. Review and strengthen password requirements, account lockout configurations, and affected test account credentials while considering the security and operational impact of the changes: <br/>
+Strengthened the Active Directory domain password policy by increasing the minimum password length from 12 to 15 characters while retaining password complexity requirements and the existing account lockout settings. Used PowerShell to reset the passwords of all six test domain accounts to unique, randomly generated 20-character values. Verified the updated password timestamps and confirmed that all six accounts remained enabled and unlocked, reducing the risk of successful password spraying attacks: <br/>
 <img src="Step9.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 10 – Retest the Password Spraying Scenario<br/><br/>

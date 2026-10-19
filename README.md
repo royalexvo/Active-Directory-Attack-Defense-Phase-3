@@ -83,7 +83,7 @@ Repeated the controlled password spraying attack using NetExec after implementin
 <img src="Step10.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 11 – Verify Remediation & Final Security Configuration<br/><br/>
-Perform a final verification of the Active Directory password policies, account lockout settings, domain user configurations, and security auditing. Document the defensive improvements and remaining limitations to establish the final security configuration of the Active Directory environment: <br/>
+Performed a final verification of the Active Directory security configuration following the controlled password spraying attack and remediation. Confirmed the strengthened 15-character minimum password policy, password complexity requirements, and existing account lockout settings. Verified that all six domain accounts remained enabled and unlocked with updated password timestamps. Reviewed Windows security auditing configurations and confirmed that six failed logon events (Event ID 4625) were recorded during the post-remediation test. Identified Credential Validation auditing as a remaining monitoring improvement for additional authentication visibility: <br/>
 <img src="Step11.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 </p>

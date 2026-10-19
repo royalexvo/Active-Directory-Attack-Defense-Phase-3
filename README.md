@@ -79,7 +79,7 @@ Strengthened the Active Directory domain password policy by increasing the minim
 <img src="Step9.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 10 – Retest the Password Spraying Scenario<br/><br/>
-Repeat the controlled password spraying simulation after implementing the defensive changes. Compare the authentication results, account lockout behavior, and Windows Security events against the initial attack to evaluate the effectiveness of the implemented controls: <br/>
+Repeated the controlled password spraying attack using NetExec after implementing the Active Directory password policy and account security improvements. Tested the same common password against all six domain accounts and confirmed that every authentication attempt failed. Used PowerShell to verify that each account recorded one failed password attempt and remained unlocked. The retest confirmed that the hardened accounts continued rejecting the tested password while preserving the existing account lockout protections: <br/>
 <img src="Step10.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
 <br/>
 Step 11 – Verify Remediation & Final Security Configuration<br/><br/>

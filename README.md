@@ -1,3 +1,4 @@
+
 <h1>Password Spraying Attack & Defense</h1>
 
 <h2>Description</h2>
@@ -44,46 +45,46 @@ This phase provides hands-on experience with identifying, investigating, and def
 <p align="center">
 Step 1 – Prepare the Password Spraying Attack Scenario<br/><br/>
 Verified the existing Active Directory environment and identified six enabled domain user accounts for the controlled password spraying simulation. Used PowerShell to confirm the Myforest.com domain, domain controller, and account lockout status. All six accounts were enabled and unlocked, establishing the initial environment before conducting the attack: <br/>
-<img src="Step1.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
+<a href="https://raw.githubusercontent.com/royalexvo/Active-Directory-Attack-Defense-Phase-3/main/Step1.png"><img src="Step1.png?raw=true" height="80%" width="80%" alt="Project Steps"/></a>
 <br/>
 Step 2 – Verify Kali Linux Network & Domain Connectivity<br/><br/>
 Verified network connectivity between the Kali Linux attacker VM (192.168.10.30), Windows Server 2022 domain controller (192.168.10.10), and Windows 11 workstation (192.168.10.20). Used ICMP ping tests to confirm successful communication with both Windows systems and verified that the Myforest.com domain correctly resolved to the domain controller IP address using DNS queries: <br/>
-<img src="Step2.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
+<a href="https://raw.githubusercontent.com/royalexvo/Active-Directory-Attack-Defense-Phase-3/main/Step2.png"><img src="Step2.png?raw=true" height="80%" width="80%" alt="Project Steps"/></a>
 <br/>
 Step 3 – Review Account Lockout & Password Policies<br/><br/>
 Reviewed the existing Active Directory password and account lockout policies configured during Phase 1 using PowerShell. Verified the minimum password length of 12 characters, enabled password complexity, password history requirements, and password expiration settings. Confirmed an account lockout threshold of three failed attempts, a six-hour lockout duration, and a 30-minute observation window. Additionally, verified that all six test domain accounts were governed by the Default Domain Policy, establishing the baseline security configuration before the controlled password spraying attack: <br/>
-<img src="Step3.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
+<a href="https://raw.githubusercontent.com/royalexvo/Active-Directory-Attack-Defense-Phase-3/main/Step3.png"><img src="Step3.png?raw=true" height="80%" width="80%" alt="Project Steps"/></a>
 <br/>
 Step 4 – Prepare Password Spraying Tools & Test Accounts<br/><br/>
 Prepared the Kali Linux attacker VM for the controlled password spraying simulation by verifying the installation of NetExec and its SMB authentication module. Created a username list containing six authorized Active Directory test accounts and confirmed the file contents and account count. These preparations established the tools and target accounts required for the upcoming attack simulation: <br/>
-<img src="Step4.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
+<a href="https://raw.githubusercontent.com/royalexvo/Active-Directory-Attack-Defense-Phase-3/main/Step4.png"><img src="Step4.png?raw=true" height="80%" width="80%" alt="Project Steps"/></a>
 <br/>
 Step 5 – Perform the Controlled Password Spraying Attack<br/><br/>
 Performed a controlled password spraying attack against six authorized Active Directory domain accounts using NetExec from the Kali Linux attacker VM. Tested a single common password across all six accounts through SMB authentication against the Windows Server 2022 domain controller. All six authentication attempts returned STATUS_LOGON_FAILURE, demonstrating unsuccessful password spraying attempts against the existing domain accounts: <br/>
-<img src="Step5.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
+<a href="https://raw.githubusercontent.com/royalexvo/Active-Directory-Attack-Defense-Phase-3/main/Step5.png"><img src="Step5.png?raw=true" height="80%" width="80%" alt="Project Steps"/></a>
 <br/>
 Step 6 – Analyze Authentication Attempts & Account Lockouts<br/><br/>
 Analyzed the results of the controlled password spraying attack using PowerShell on the Windows Server 2022 domain controller. Verified that all six domain accounts remained enabled and unlocked, with each account recording one failed password attempt at the time of the simulation. Confirmed that the attack did not trigger the configured three-attempt account lockout threshold, demonstrating how password spraying can generate authentication failures without immediately locking domain accounts: <br/>
-<img src="Step6.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
+<a href="https://raw.githubusercontent.com/royalexvo/Active-Directory-Attack-Defense-Phase-3/main/Step6.png"><img src="Step6.png?raw=true" height="80%" width="80%" alt="Project Steps"/></a>
 <br/>
 Step 7 – Investigate Windows Security Events<br/><br/>
 Investigated the authentication activity generated during the controlled password spraying attack using Windows Event Viewer on the Windows Server 2022 domain controller. Identified six failed logon events (Event ID 4625) occurring at the same timestamp as the attack. Examined the affected domain account, network logon type, and authentication failure codes to correlate the Windows Security logs with the password spraying simulation: <br/>
-<img src="Step7.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
+<a href="https://raw.githubusercontent.com/royalexvo/Active-Directory-Attack-Defense-Phase-3/main/Step7.png"><img src="Step7.png?raw=true" height="80%" width="80%" alt="Project Steps"/></a>
 <br/>
 Step 8 – Develop & Test Password Spraying Detection<br/><br/>
 Developed and tested a PowerShell-based detection method using Windows Security Event ID 4625 to identify potential password spraying activity. Analyzed failed authentication events within a one-minute window and grouped them by source IP address to identify repeated failures across multiple domain accounts. Successfully detected six failed authentication attempts targeting six unique accounts from the Kali Linux attacker VM (192.168.10.30), demonstrating how authentication logs can be correlated to identify suspicious password spraying patterns: <br/>
-<img src="Step8.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
+<a href="https://raw.githubusercontent.com/royalexvo/Active-Directory-Attack-Defense-Phase-3/main/Step8.png"><img src="Step8.png?raw=true" height="80%" width="80%" alt="Project Steps"/></a>
 <br/>
 Step 9 – Implement Password Policy & Account Security Hardening<br/><br/>
 Strengthened the Active Directory domain password policy by increasing the minimum password length from 12 to 15 characters while retaining password complexity requirements and the existing account lockout settings. Used PowerShell to reset the passwords of all six test domain accounts to unique, randomly generated 20-character values. Verified the updated password timestamps and confirmed that all six accounts remained enabled and unlocked, reducing the risk of successful password spraying attacks: <br/>
-<img src="Step9.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
+<a href="https://raw.githubusercontent.com/royalexvo/Active-Directory-Attack-Defense-Phase-3/main/Step9.png"><img src="Step9.png?raw=true" height="80%" width="80%" alt="Project Steps"/></a>
 <br/>
 Step 10 – Retest the Password Spraying Scenario<br/><br/>
 Repeated the controlled password spraying attack using NetExec after implementing the Active Directory password policy and account security improvements. Tested the same common password against all six domain accounts and confirmed that every authentication attempt failed. Used PowerShell to verify that each account recorded one failed password attempt and remained unlocked. The retest confirmed that the hardened accounts continued rejecting the tested password while preserving the existing account lockout protections: <br/>
-<img src="Step10.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
+<a href="https://raw.githubusercontent.com/royalexvo/Active-Directory-Attack-Defense-Phase-3/main/Step10.png"><img src="Step10.png?raw=true" height="80%" width="80%" alt="Project Steps"/></a>
 <br/>
 Step 11 – Verify Remediation & Final Security Configuration<br/><br/>
 Performed a final verification of the Active Directory security configuration following the controlled password spraying attack and remediation. Confirmed the strengthened 15-character minimum password policy, password complexity requirements, and existing account lockout settings. Verified that all six domain accounts remained enabled and unlocked with updated password timestamps. Reviewed Windows security auditing configurations and confirmed that six failed logon events (Event ID 4625) were recorded during the post-remediation test. Identified Credential Validation auditing as a remaining monitoring improvement for additional authentication visibility: <br/>
-<img src="Step11.png?raw=true" height="80%" width="80%" alt="Project Steps"/>
+<a href="https://raw.githubusercontent.com/royalexvo/Active-Directory-Attack-Defense-Phase-3/main/Step11.png"><img src="Step11.png?raw=true" height="80%" width="80%" alt="Project Steps"/></a>
 <br/>
 </p>
